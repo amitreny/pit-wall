@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* Design tokens from the Stitch "Pit Wall Telemetry" design system. */
+@theme inline {
+  --font-display: var(--font-barlow), "Arial Narrow", sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-sans: var(--font-grotesk), system-ui, sans-serif;
+
+  --color-surface: #121316;
+  --color-surface-container-lowest: #0d0e11;
+  --color-surface-container-low: #1b1b1f;
+  --color-surface-container: #1f1f23;
+  --color-surface-container-high: #292a2d;
+  --color-surface-container-highest: #343538;
+  --color-surface-bright: #38393c;
+  --color-on-surface: #e3e2e6;
+  --color-on-surface-variant: #bbcbb8;
+  --color-outline: #859583;
+  --color-primary: #7fff96;
+  --color-primary-container: #2ee66b;
+  --color-on-primary: #003913;
+  --color-on-primary-container: #006227;
+  --color-secondary: #e1b6ff;
+  --color-secondary-fixed: #f2daff;
+  --color-tertiary: #ffddd9;
+  --color-tertiary-container: #ffb7af;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+
+  /* Timing colours: fastest overall, personal best, slower. */
+  --color-timing-purple: #b14cff;
+  --color-timing-green: #2ee66b;
+  --color-timing-yellow: #ffd21f;
+  --color-signal-red: #ff2d2d;
+}
+
+@utility t-headline-xl {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+@utility t-headline-lg {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+@utility t-headline-md {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+@utility t-telemetry-display {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  line-height: 2rem;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+@utility t-telemetry-cell {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+@utility t-label-caps {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@utility t-label-micro {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@utility t-body-sm {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+}
+
+/* Red-and-white kerb strip used as a section divider. */
+@utility kerb-pattern {
+  background: repeating-linear-gradient(45deg, #ffb7af, #ffb7af 6px, #121316 6px, #121316 12px);
+}
+
+body {
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+  overscroll-behavior: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  line-height: 1;
+  user-select: none;
+}
